@@ -6,11 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		sh 'echo ${HOME}'
-		sh 'pwd'
-		sh 'ls -la'
-		sh 'ls -la ./server'
-                sh 'cd ./server; docker build -t yehonatan111/appserver .'
+                sh 'cd ./server; docker build -t yehonatan111/appserver -f ./server/Dockerfile'
                 sh 'docker build -t yehonatan111/appfront ./frontend'
 	    }
 	}

@@ -9,7 +9,8 @@ pipeline {
 		sh 'echo ${HOME}'
 		sh 'pwd'
 		sh 'ls -la'
-                sh 'cd .server/; docker build -t yehonatan111/appserver .'
+		sh 'ls -la ./server'
+                sh 'cd ./server; docker build -t yehonatan111/appserver .'
                 sh 'docker build -t yehonatan111/appfront ./frontend'
 	    }
 	}

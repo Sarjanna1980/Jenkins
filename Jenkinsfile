@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t yehonatan111/appserver -f ./server/Dockerfile'
+                sh 'docker build -t yehonatan111/appserver -f /var/lib/jenkins/workspace/Test3/server/Dockerfile'
                 sh 'docker build -t yehonatan111/appfront -f ./frontend/Dockerfile'
 	    }
 	}

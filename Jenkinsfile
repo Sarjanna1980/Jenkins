@@ -7,7 +7,8 @@ pipeline {
         stage('Build') {
             steps {
 		sh 'echo ${HOME}'
-		sh 'cd .server/'
+		sh 'pwd'
+		sh 'ls -la'
                 sh 'cd .server/; docker build -t yehonatan111/appserver .'
                 sh 'docker build -t yehonatan111/appfront ./frontend'
 	    }

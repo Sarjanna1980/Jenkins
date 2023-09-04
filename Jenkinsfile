@@ -12,6 +12,7 @@ pipeline {
                 sh 'docker build -t yehonatan111/appfront ./frontend'
             }
         }
+        }
 
         stage('Deploy Containers') {
             steps {

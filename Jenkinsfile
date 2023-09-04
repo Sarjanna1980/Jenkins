@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		echo ${HOME}
+		sh 'echo ${HOME}'
                 sh 'docker build -t yehonatan111/appserver ./server'
                 sh 'docker build -t yehonatan111/appfront ./frontend'
 	    }

@@ -5,13 +5,12 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
 
-    stages {
+    // stages {
         stage('Build') {
             steps {
                 sh 'docker build -t yehonatan111/appserver ./server'
                 sh 'docker build -t yehonatan111/appfront ./frontend'
             }
-        }
         }
 
         stage('Deploy Containers') {

@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd ./server; docker build -t yehonatan111/appserver -f ./server/Dockerfile'
+                sh 'docker build -t yehonatan111/appserver -f ./server/Dockerfile'
                 sh 'docker build -t yehonatan111/appfront ./frontend'
 	    }
 	}

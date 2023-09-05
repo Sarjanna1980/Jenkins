@@ -65,6 +65,6 @@ pipeline {
 //             echo "Tests failed, pipeline failed!"
 //             cleanUpContainers()
 //         }
-//     }
+      }
     }
 }

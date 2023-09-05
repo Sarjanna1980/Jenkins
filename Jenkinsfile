@@ -9,7 +9,7 @@ pipeline {
                 sh 'docker build -t yehonatan111/appserver ./server'.
                 sh 'docker build -t yehonatan111/appfront ./frontend'.
 	    //}
-	}
+	//}
         stage('Deploy Containers') {
             steps {
 		sh 'docker run -d -p 3001:3001 yehonatan111/appserver'
